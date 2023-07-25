@@ -1,0 +1,90 @@
+{
+	"security.workspace.trust.untrustedFiles": "open",
+	"security.workspace.trust.enabled": false,
+	"latex-workshop.latex.recipes": [
+			{
+			"name": "lualatex × 2 ➞ biber ➞ makeglossaries ➞ lualatex × 2",
+			"tools": [
+				"lualatex",
+				"lualatex",
+				"biber",
+				"makeglossaries",
+				"lualatex",
+				"lualatex"
+			]
+		},
+		{
+			"name": "lualatex (lualatex)",
+			"tools": ["lualatex"]
+		},
+
+		{
+			"name": "biber ",
+			"tools": ["biber"]
+		},
+		{
+			"name": "makeglossaries",
+			"tools": ["makeglossaries"]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "makeglossaries",
+			"command": "makeglossaries",
+			"args": ["%DOCFILE%"]
+		},
+		{
+			"name": "lualatex",
+			"command": "lualatex",
+			"args": [
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"%DOC%.tex"
+			]
+		},
+		{
+			"name": "biber",
+			"command": "biber",
+			"args": ["%DOCFILE%.bcf"]
+		}
+	],
+	"editor.wordWrap": "on",
+	"workbench.colorTheme": "One Hunter Theme Vercel",
+	"editor.fontFamily": "Fira Code",
+	"editor.fontSize": 13,
+	"prettier.useTabs": true,
+
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"workbench.iconTheme": "vscode-icons",
+	"editor.fontLigatures": false,
+	"[python]": {
+		"editor.formatOnType": true
+	},
+	"editor.minimap.enabled": false,
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"window.zoomLevel": 2,
+	"workbench.activityBar.visible": false,
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
+	"editor.renderWhitespace": "all",
+
+	// https://www.reddit.com/r/vscode/comments/sn0uhj/disable_prop_highlighting_after_tab/
+	// disabling highlighting after autocomplete in TS ans JSX prevented more autocompletion
+	"typescript.preferences.jsxAttributeCompletionStyle": "none",
+	"javascript.preferences.jsxAttributeCompletionStyle": "none"
+}
+
