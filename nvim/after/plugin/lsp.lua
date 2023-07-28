@@ -10,6 +10,18 @@ end)
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 
-lsp.ensure_installed({'tsserver', 'eslint'})
+lsp.ensure_installed({'tsserver', 'eslint', 'clangd' })
 
 lsp.setup()
+
+
+
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    ['<Tab>'] = cmp.mapping.confirm({select = true}),
+  }
+})
+
+
