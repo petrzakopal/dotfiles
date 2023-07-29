@@ -41,5 +41,7 @@ use {
 }
 
 
+use "olimorris/onedarkpro.nvim"
+
   end)
 
