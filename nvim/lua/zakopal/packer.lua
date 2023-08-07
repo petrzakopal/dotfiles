@@ -43,5 +43,20 @@ use {
 
 use "olimorris/onedarkpro.nvim"
 
+
+use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
+
+ use {
+    'windwp/nvim-ts-autotag',
+    opt = true,
+    ft = 'typescriptreact',
+    requires = {{'nvim-treesitter/nvim-treesitter'}},
+    config = function() require('nvim-ts-autotag').setup() end,
+  }
   end)
+
+
 
