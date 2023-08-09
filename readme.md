@@ -1,5 +1,5 @@
 # Zakopal Dotfiles
-_Updated when time comes..._
+_Will be updated when I find and test something which should be included in my configuration..._
 
 [Create own NVIM theme - lush.nvim](https://github.com/rktjmp/lush.nvim)
 
