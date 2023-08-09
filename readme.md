@@ -14,7 +14,10 @@ For auto pairs in nvim I had to use config from this issue [GitHuib Issue](https
 
 # Fuzzy Finder in Terminal
 
+
 [fzf](https://github.com/junegunn/fzf) - repository of a project
+
+[Pste this code to a shell script to uninstall fzf](https://github.com/junegunn/fzf/blob/master/uninstall)
 
 [fzf on macOS](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
 
