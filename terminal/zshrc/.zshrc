@@ -50,3 +50,19 @@ function parse_git_branch() {
 # My edited prompt with logic to omit a " " when there is no git repository
 export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%1~$(parse_git_branch)${COLOR_DEF} $ '
 
+
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# For the function work, you need to instal fzf
+# Install on macbook via "brew install fzf"
+# Info how to use on macOS => https://sourabhbajaj.com/mac-setup/iTerm/fzf.html
+# project repository => https://github.com/junegunn/fzf
+# fd - cd to selected directory
+fd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}

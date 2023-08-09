@@ -10,3 +10,11 @@ _Will be updated when I find and test something which should be included in my c
 
 ## Notes
 For auto pairs in nvim I had to use config from this issue [GitHuib Issue](https://github.com/windwp/nvim-ts-autotag/issues/33)
+
+
+# Fuzzy Finder in Terminal
+
+[fzf](https://github.com/junegunn/fzf) - repository of a project
+
+[fzf on macOS](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
+
