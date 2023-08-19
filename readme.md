@@ -66,10 +66,22 @@ with oh-my-zsh `git clone https://github.com/zsh-users/zsh-syntax-highlighting.g
 
 set default terminal in tmux
 
-```
+```bash
 cd ~
 touch .tmux.conf
 echo set-option -g default-shell /bin/zsh > .tmux.conf
 tmux kill-server
 
 ```
+
+for runnign nvm in zsh when installed in bash run `source ~/.nvm/nvm.sh` - node and pm2 will become available - in .zshrc file for example
+
+to remove error `manpath: can't set the locale; make sure $LC_* and $LANG are correct`
+and in file /etc/default/locale add line LC_ALL="en_US.UTF-8" and relogin to your server - using root
+
+for example 
+
+```bash
+sudo su
+
+echo LC_ALL="en_US.UTF-8">>/etc/default/locale```
