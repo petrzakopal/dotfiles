@@ -31,3 +31,14 @@ packer needs to be installed
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
+
+build essenctils for c compiler need to be installed
+`sudo apt-get install build-essential`
+
+copy dotfiles to /home/<username>/.config/nvim
+
+open nvim and go to lua/zakopal/packer.lua - source it with `:so` and then :PackerSync
+
+apply color scheme
+
+`colorscheme onedark_dark`
