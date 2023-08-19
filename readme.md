@@ -21,3 +21,13 @@ For auto pairs in nvim I had to use config from this issue [GitHuib Issue](https
 
 [fzf on macOS](https://sourabhbajaj.com/mac-setup/iTerm/fzf.html)
 
+# For installing - make script and instructions later
+on newest ubuntu versions - 23.04 you need ot install fuse 2
+`sudo apt install libfuse2`
+packer needs to be installed
+[https://github.com/wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) via command
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
