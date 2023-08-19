@@ -42,3 +42,6 @@ open nvim and go to lua/zakopal/packer.lua - source it with `:so` and then :Pack
 apply color scheme
 
 `colorscheme onedark_dark`
+
+unzip must be installed for mason and clang language server probably
+`sudo apt-get install unzip`

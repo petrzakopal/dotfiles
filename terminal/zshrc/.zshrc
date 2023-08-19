@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
- export PATH=$HOME/bin:/petrzakopal/local/bin:$PATH
- export PATH=/Users/petrzakopal/.local/bin:$PATH
+ export PATH=$HOME/bin:/petrzakopal/local/bin:$PATH # not on linux
+ export PATH=/Users/petrzakopal/.local/bin:$PATH # not on linux
+ export TERM=xterm-256color # for good colors in tmux on linux
 
 
 # Path to your oh-my-zsh installation.
