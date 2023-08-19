@@ -24,8 +24,22 @@ For auto pairs in nvim I had to use config from this issue [GitHuib Issue](https
 # For installing - make script and instructions later
 on newest ubuntu versions - 23.04 you need ot install fuse 2
 `sudo apt install libfuse2`
+
+install vim via script
+
+```
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+```
+
+on a page [https://github.com/neovim/neovim/wiki/Installing-Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
 packer needs to be installed
 [https://github.com/wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) via command
+
+
+move nvim.appimage with `sudo mv nvim.appimage /usr/bin/nvim` or to which directory the command `nvim` point points
 
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
