@@ -67,3 +67,8 @@ fd() {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
+
+
+
+# Make packages available in zsh when installed in bash
+source ~/.nvm/nvm.sh
