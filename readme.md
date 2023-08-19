@@ -62,3 +62,14 @@ with `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~
 and zsh-syntah-highlighting [https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
 with oh-my-zsh `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+
+
+set default terminal in tmux
+
+```
+cd ~
+touch .tmux.conf
+echo set-option -g default-shell /bin/zsh > .tmux.conf
+tmux kill-server
+
+```
