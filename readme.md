@@ -99,3 +99,6 @@ for example
 sudo su
 
 echo LC_ALL="en_US.UTF-8">>/etc/default/locale```
+
+# When there is an error with some package
+According to this reddit thread [https://www.reddit.com/r/neovim/comments/skg2xz/treesitter_error_while_navigating_configlua/](https://www.reddit.com/r/neovim/comments/skg2xz/treesitter_error_while_navigating_configlua/) use command `rm -rf ~/.local/share/nvim/` and install Packer again and the so and the `:PackerSync`
