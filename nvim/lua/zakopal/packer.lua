@@ -13,10 +13,12 @@ use {
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
 }
-	use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
-		vim.cmd('colorscheme rose-pine')
-	end
-						})
+
+-- used for rose-pine colorscheme
+--	use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
+--		vim.cmd('colorscheme rose-pine')
+--	end
+--	})
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 use {
@@ -41,7 +43,10 @@ use {
 }
 
 
-use "olimorris/onedarkpro.nvim"
+use ({"olimorris/onedarkpro.nvim", config = function()
+	vim.cmd('colorscheme onedark_dark')
+end
+})
 
 
 use {
@@ -56,6 +61,15 @@ use {
     requires = {{'nvim-treesitter/nvim-treesitter'}},
     config = function() require('nvim-ts-autotag').setup() end,
   }
+
+
+  use {
+  'prettier/vim-prettier',
+  run = 'yarn install',
+  --ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
+}
+
+  use 'rktjmp/lush.nvim'
   end)
 
 
