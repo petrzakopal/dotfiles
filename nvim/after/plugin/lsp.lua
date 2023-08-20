@@ -10,7 +10,7 @@ end)
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 
-lsp.ensure_installed({'tsserver', 'eslint', 'clangd' })
+lsp.ensure_installed({'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss'  })
 
 lsp.setup()
 
