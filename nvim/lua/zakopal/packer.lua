@@ -69,6 +69,9 @@ use {
   --ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
 }
 
+
+use('theprimeagen/harpoon')
+
   use 'rktjmp/lush.nvim'
   end)
 
