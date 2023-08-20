@@ -5,7 +5,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>pr", vim.cmd.Prettier)
 
 
-
+-- Next and Previous Buffers
 vim.keymap.set("n", "<C-J>", vim.cmd.bnext)
 vim.keymap.set("n", "<C-K>", vim.cmd.bprev)
-
+-- Unload buffer
+vim.keymap.set("n", "<leader>bd", vim.cmd.bd)
