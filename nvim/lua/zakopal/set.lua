@@ -10,6 +10,7 @@ vim.opt.autoindent = true
 
 vim.opt.smartindent = true
 
+vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -24,7 +25,7 @@ vim.opt.termguicolors = true
 
 
 vim.opt.updatetime = 50
-
+vim.opt.scrolloff = 8
 
 vim.g.mapleader = " "
 
