@@ -145,3 +145,8 @@ Option "Tapping" "on"
 Option "NaturalScrolling" "true"
 EndSection
 ```
+
+# Info about logitech devices and how to edit them on ubuntu
+- [https://askubuntu.com/questions/1206369/logitech-options-on-linux](https://askubuntu.com/questions/1206369/logitech-options-on-linux)
+- [https://github.com/pwr-Solaar/Solaar](https://github.com/pwr-Solaar/Solaar)
+- []https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/(https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/)
