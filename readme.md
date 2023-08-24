@@ -150,3 +150,13 @@ EndSection
 - [https://askubuntu.com/questions/1206369/logitech-options-on-linux](https://askubuntu.com/questions/1206369/logitech-options-on-linux)
 - [https://github.com/pwr-Solaar/Solaar](https://github.com/pwr-Solaar/Solaar)
 - []https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/(https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/)
+
+
+# Bluetooth on a ubuntu via i3
+
+[https://techsphinx.com/linux/install-blueman-ubuntu/](https://techsphinx.com/linux/install-blueman-ubuntu/)
+
+```bash
+sudo apt install blueman
+blueman-manager
+```
