@@ -102,3 +102,13 @@ echo LC_ALL="en_US.UTF-8">>/etc/default/locale```
 
 # When there is an error with some package
 According to this reddit thread [https://www.reddit.com/r/neovim/comments/skg2xz/treesitter_error_while_navigating_configlua/](https://www.reddit.com/r/neovim/comments/skg2xz/treesitter_error_while_navigating_configlua/) use command `rm -rf ~/.local/share/nvim/` and install Packer again and the so and the `:PackerSync`
+
+
+# i3
+when installing t3 via official website [i3wm.org/docs/rrepositories.html](i3wm.org/docs/rrepositories.html) you need to update the command with `echo deb` to `echo deb [arch=arm64]` or there will be an error to `sudo apt update`
+
+
+# Export terminal settings in ubuntu
+```bash
+dconf dump /org/gnome/terminal/ > gnome_terminal_settings_backup.txt
+```
