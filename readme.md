@@ -112,3 +112,36 @@ when installing t3 via official website [i3wm.org/docs/rrepositories.html](i3wm.
 ```bash
 dconf dump /org/gnome/terminal/ > gnome_terminal_settings_backup.txt
 ```
+
+
+# Natural scrolling in i3 ubuntu
+
+mixed tutorials from [https://www.reddit.com/r/archlinux/comments/tt9uk9/please_help_natural_scrolling_doesnt_work/](https://www.reddit.com/r/archlinux/comments/tt9uk9/please_help_natural_scrolling_doesnt_work/)
+(very down there)
+
+but I used path "/usr/share/X11/xorg.conf.d/40-libinput.cong"
+
+```
+Input all of this in /etc/X11/xorg.conf.d/30-touchpad.conf
+
+
+
+# Natural scrolling for all usb devices (mouse)
+
+Section "InputClass"
+Identifier "devname"
+Driver "libinput"
+Option "Tapping" "on"
+Option "NaturalScrolling" "false"
+EndSection
+
+# Reverse scrolling for touchpad
+Section "InputClass"
+Identifier "libinput touchpad catchall"
+MatchIsTouchpad "on"
+MatchDevicePath "/dev/input/event*"
+Driver "libinput"
+Option "Tapping" "on"
+Option "NaturalScrolling" "true"
+EndSection
+```
