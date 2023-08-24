@@ -1,0 +1,23 @@
+[legacy/keybindings]
+copy='<Alt>c'
+paste='<Alt>v'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
+background-color='rgb(1,11,23)'
+bold-color='rgb(238,238,238)'
+bold-color-same-as-fg=false
+cursor-background-color='rgb(56,255,156)'
+cursor-blink-mode='off'
+cursor-colors-set=true
+cursor-foreground-color='rgb(56,255,156)'
+font='Hack Nerd Font Mono 18'
+foreground-color='rgb(235,221,244)'
+highlight-background-color='rgb(165,205,255)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(235,221,244)'
+palette=['rgb(11,59,97)', 'rgb(255,58,58)', 'rgb(82,255,207)', 'rgb(255,243,131)', 'rgb(19,118,248)', 'rgb(199,146,234)', 'rgb(255,93,212)', 'rgb(21,252,162)', 'rgb(98,104,108)', 'rgb(255,84,176)', 'rgb(115,255,216)', 'rgb(252,244,173)', 'rgb(55,141,254)', 'rgb(174,129,255)', 'rgb(255,105,215)', 'rgb(95,251,190)']
+scrollback-unlimited=true
+use-system-font=false
+use-theme-colors=false
+visible-name='PZ'
