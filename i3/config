@@ -199,8 +199,8 @@ bar {
 exec --no-startup-id xfce4-power-manager -c
 
 # Move worskpace between screens
-bindsym $mod+o move workspace to output left
 bindsym $mod+p move workspace to output right
+bindsym $mod+u move workspace to output up
 
 
 # Set key speed
