@@ -16,6 +16,19 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss' })
 
+
+
+
+lsp.on_attach(function(client, bufnr)
+    lsp.default_keymaps({ buffer = bufnr })
+    local opts = { buffer = bufnr }
+
+    vim.keymap.set({ 'n', 'x' }, "<leader>p", function()
+        vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
+    end, opts)
+end)
+
+
 lsp.setup()
 
 
@@ -27,3 +40,5 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping.confirm({ select = true }),
     }
 })
+
+

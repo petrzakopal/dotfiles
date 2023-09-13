@@ -151,8 +151,17 @@ EndSection
 - [https://github.com/pwr-Solaar/Solaar](https://github.com/pwr-Solaar/Solaar)
 - []https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/(https://danishshakeel.me/configure-logitech-mx-master-3-on-linux-logiops/)
 
+# UBUNTU INFO TEX
+add new paths to zshrc on ubuntu to `.zshrc`
 
-# Bluetooth on a ubuntu via i3
+```
+# For LaTeX
+ export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+ export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+ export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+ ```
+  
+ # Bluetooth on a ubuntu via i3
 
 [https://techsphinx.com/linux/install-blueman-ubuntu/](https://techsphinx.com/linux/install-blueman-ubuntu/)
 
@@ -160,3 +169,4 @@ EndSection
 sudo apt install blueman
 blueman-manager
 ```
+ 

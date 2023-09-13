@@ -6,7 +6,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 
 -- LSP Zero format
-vim.keymap.set("n", "<leader>p", vim.cmd.LspZeroFormat)
+-- vim.keymap.set("n", "<leader>p", vim.cmd.LspZeroFormat)
 
 
 
