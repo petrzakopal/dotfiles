@@ -88,7 +88,7 @@ tmux kill-server
 
 ```
 
-for runnign nvm in zsh when installed in bash run `source ~/.nvm/nvm.sh` - node and pm2 will become available - in .zshrc file for example
+for running nvm in zsh when installed in bash run `source ~/.nvm/nvm.sh` - node and pm2 will become available - in .zshrc file for example
 
 to remove error `manpath: can't set the locale; make sure $LC_* and $LANG are correct`
 and in file /etc/default/locale add line LC_ALL="en_US.UTF-8" and relogin to your server - using root
@@ -98,7 +98,8 @@ for example
 ```bash
 sudo su
 
-echo LC_ALL="en_US.UTF-8">>/etc/default/locale```
+echo LC_ALL="en_US.UTF-8">>/etc/default/locale
+```
 
 # When there is an error with some package
 According to this reddit thread [https://www.reddit.com/r/neovim/comments/skg2xz/treesitter_error_while_navigating_configlua/](https://www.reddit.com/r/neovim/comments/skg2xz/treesitter_error_while_navigating_configlua/) use command `rm -rf ~/.local/share/nvim/` and install Packer again and the so and the `:PackerSync`
