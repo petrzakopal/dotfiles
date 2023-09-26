@@ -171,3 +171,18 @@ sudo apt install blueman
 blueman-manager
 ```
  
+
+
+# Exporting and loading terminal settings on Ubuntu
+
+## Save the settings
+
+```bash
+dconf dump /org/gnome/terminal/ > gnome_terminal_settings_backup.txt
+```
+
+## Load the settings
+
+```bash
+dconf load /org/gnome/terminal/ < gnome_terminal_settings_backup.txt
+```
