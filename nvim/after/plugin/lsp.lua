@@ -15,7 +15,7 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
  require('lspconfig').verible.setup {
  }
 
-lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss', 'clangd', 'python-lsp-server', 'texlab' })
+lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss', 'clangd', 'pylsp', 'texlab' })
 
 require('lspconfig').clangd.setup {
     cmd = {'clangd', '--background-index', '--compile-commands-dir', '.', '--query-driver=/usr/bin/*'},
