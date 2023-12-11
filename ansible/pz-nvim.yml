@@ -1,0 +1,31 @@
+---
+- name: Configure NVIM for pz
+  hosts: localhost
+  become: true
+  become_user: petr
+  become_method: sudo
+
+  tasks:
+    - name: Delete if exists the dotfiles folder
+      command: rm -rf dotfiles
+
+    - name: Delete if exists the packer with nvim folder 
+      command: rm -rf ~/.local/share/nvim
+
+    - name: Delete if exists the nvim config folder
+      command: rm -rf ~/.config/nvim
+
+    - name: Clone the dotfiles repository
+      command: git clone https://github.com/petrzakopal/dotfiles.git
+
+    - name: Create the config folder
+      command: mkdir -p ~/.config/
+
+    - name: Move the nvim config files
+      command: cp -r ./dotfiles/nvim ~/.config
+
+    - name: Install packer
+      command: git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+    - name: Delete if exists the dotfiles folder
+      command: rm -rf dotfiles
