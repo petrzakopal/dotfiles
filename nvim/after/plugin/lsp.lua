@@ -9,14 +9,29 @@ end)
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
+
+
 -- Ensure the verible binaries are installed from chipsalliance/verible GitHub
- require('lspconfig').verible.setup {}
+ require('lspconfig').verible.setup {
+ }
 
+lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss', 'clangd', 'pylsp', 'texlab' })
 
-
-lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss' })
-
-
+require('lspconfig').clangd.setup {
+    cmd = {'clangd', '--background-index', '--compile-commands-dir', '.', '--query-driver=/usr/bin/*'},
+--    init_options = {
+--        clangdFileStatus = true,
+--        clangdSemanticHighlighting = true
+--    },
+    filetypes = {'c', 'cpp', 'cxx', 'cc'},
+ --   root_dir = function() vim.fn.getcwd() end,
+ --   settings = {
+ --       ['clangd'] = {
+ --           ['compilationDatabasePath'] = 'obj_dir',
+ --           ['fallbackFlags'] = {'-std=c++17'}
+ --       }
+ --   }
+}
 
 
 lsp.on_attach(function(client, bufnr)
