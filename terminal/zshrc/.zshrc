@@ -1,8 +1,14 @@
 # If you come from bash you might have to change your $PATH.
- export PATH=$HOME/bin:/petrzakopal/local/bin:$PATH # not on linux
- export PATH=/Users/petrzakopal/.local/bin:$PATH # not on linux
- export TERM=xterm-256color # for good colors in tmux on linux
+# export PATH=$HOME/bin:/petrzakopal/local/bin:$PATH # not on linux
+# export PATH=/home/petr/.local/bin:$PATH # not on linux
+export TERM=xterm-256color # for good colors in tmux on linux
+export JAVA_HOME="/usr/local/jdk-21.0.1"
+export PATH=$JAVA_HOME/bin:$PATH
 
+# For LaTeX
+ export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+ export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+ export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -72,3 +78,14 @@ fd() {
 
 # Make packages available in zsh when installed in bash
 source ~/.nvm/nvm.sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "nvm use node &>/dev/null"
+
+
+xset r rate 250 50
+
+# For pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+

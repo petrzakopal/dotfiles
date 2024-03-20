@@ -6,6 +6,9 @@ lsp.on_attach(function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
 
+
+local lspconfig = require("lspconfig")
+
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
@@ -15,7 +18,10 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
  require('lspconfig').verible.setup {
  }
 
-lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss', 'clangd', 'pylsp', 'texlab' })
+lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss', 'clangd',
+--'pylsp',
+"pyright",
+'texlab' })
 
 require('lspconfig').clangd.setup {
     cmd = {'clangd', '--background-index', '--compile-commands-dir', '.', '--query-driver=/usr/bin/*'},
@@ -42,6 +48,12 @@ lsp.on_attach(function(client, bufnr)
         vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
     end, opts)
 end)
+
+
+lspconfig.pyright.setup({
+    on_attach = lsp.on_attach,
+    filetypes = {"python"},
+})
 
 
 lsp.setup()

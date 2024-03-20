@@ -54,6 +54,12 @@ use {
     config = function() require("nvim-autopairs").setup {} end
 }
 
+
+use {
+	"ThePrimeagen/vim-be-good",
+}
+
+
  use {
     'windwp/nvim-ts-autotag',
     opt = true,
