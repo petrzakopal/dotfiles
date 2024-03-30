@@ -60,6 +60,20 @@ use {
 }
 
 
+--use {
+--	"echasnovski/mini.statusline",
+--    config = function ()
+--        require("mini.statusline").setup({
+--            use_icons = true
+--        })
+--    end
+--}
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
+
  use {
     'windwp/nvim-ts-autotag',
     opt = true,
