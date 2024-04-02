@@ -211,3 +211,10 @@ One is forcing to disable powersaving, while the other one enable it.
 Once you have put the file in the right folder, simply restart NetworkManager:
 
     sudo systemctl restart NetworkManager
+
+
+# Set QWERTY keyboard on X11 Linux
+
+```bash
+setxkbmap -layout cz -variant qwerty-mac
+```
