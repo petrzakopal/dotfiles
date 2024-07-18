@@ -243,4 +243,28 @@ And maybe using this command:
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
+# GitHub markdown syntax tips
 
+> [!NOTE]
+> this is a note, in the following block there is a code which does this
+
+```md
+> [!NOTE]
+> this is a note, in the following block there is a code which does this
+```
+
+> [!TIP]
+> this is a tip, in the following block there is a code which does this
+
+```md
+> [!TIP]
+> this is a tip, in the following block there is a code which does this
+```
+
+> [!WARNING]
+> this is a warning, in the following block there is a code which does this
+
+```md
+> [!WARNING]
+> this is a warning, in the following block there is a code which does this
+```
