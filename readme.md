@@ -84,6 +84,12 @@ set default terminal in tmux
 cd ~
 touch .tmux.conf
 echo set-option -g default-shell /bin/zsh > .tmux.conf
+echo setw -g mode-keys vi > .tmux.conf
+echo bind P paste-buffer > .tmux.conf
+echo bind-key -T copy-mode-vi v send-keys -X begin-selection > .tmux.conf
+echo bind-key -T copy-mode-vi y send-keys -X copy-selection > .tmux.conf
+echo bind-key -T copy-mode-vi r send-keys -X rectangle-toggle > .tmux.conf
+echo set-option -g history-limit 100000 > .tmux.conf
 tmux kill-server
 
 ```
