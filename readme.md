@@ -218,3 +218,23 @@ Once you have put the file in the right folder, simply restart NetworkManager:
 ```bash
 setxkbmap -layout cz -variant qwerty-mac
 ```
+
+# Set darkmode on Linux
+
+Via this issue and comment [GTK4 apps don't respect dark theme in i3 #5896](https://github.com/i3/i3/discussions/5896#discussioncomment-8556941)
+
+```sh
+mkdir -p $HOME/.config/xdg-desktop-portal/
+vim $HOME/.config/xdg-desktop-portal/portals.conf
+
+# and paste there
+[preferred]
+default=gtk;wlr
+```
+
+And maybe using this command:
+```sh
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
+
+
