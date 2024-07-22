@@ -243,6 +243,14 @@ And maybe using this command:
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
+# Sound manager for Linux i3
+When the sound cannot be controlled using buttons, install [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) and the buttons should start working.
+
+
+```sh
+sudo apt install pavucontrol
+```
+
 # GitHub markdown syntax tips
 
 > [!NOTE]
