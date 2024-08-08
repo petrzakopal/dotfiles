@@ -1,4 +1,8 @@
 # Alacritty Configuration
+import = [
+    #   "~/.config/alacritty/catppuccin-latte.toml" # obtained from https://github.com/catppuccin/alacritty
+    #   "~/.config/alacritty/pz-dark.toml"
+]
 
 # Keybindings
 [[keyboard.bindings]]
@@ -14,40 +18,6 @@ action = "Copy"
 # Terminal bell
 #[bell]
 #audible = false
-
-# Colors
-[colors]
-[colors.primary]
-background = "0x010b17"
-foreground = "0xebddf4"
-
-[colors.cursor]
-text = "0x38ff9c"
-cursor = "0x38ff9c"
-
-[colors.selection]
-text = "0xebddf4"
-background = "0xa5cdff"
-
-[colors.normal]
-black = "0x0b3b61"
-red = "0xff3a3a"
-green = "0x52ffcf"
-yellow = "0xfff383"
-blue = "0x1376f8"
-magenta = "0xc792ea"
-cyan = "0xff5dd4"
-white = "0x15fca2"
-
-[colors.bright]
-black = "0x626868"
-red = "0xff54b0"
-green = "0x73ffd8"
-yellow = "0xfcf4ad"
-blue = "0x378dfc"
-magenta = "0xae81ff"
-cyan = "0xff69d7"
-white = "0x5ffbbe"
 
 # Font settings
 [font]
