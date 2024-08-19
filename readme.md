@@ -276,3 +276,9 @@ sudo apt install pavucontrol
 > [!WARNING]
 > this is a warning, in the following block there is a code which does this
 ```
+
+# Waking Up on Linux
+- in network manager disable wake up on lan for the ethernet
+- check which devices are enabled to wake up the system using `grep . /sys/bus/usb/devices/*/power/wakeup`
+- check the device names using ` grep . /sys/bus/usb/devices/*/product`
+- disable the device which should not wake up the system using `echo disabled | sudo tee /sys/bus/usb/devices/<device-name>/power/wakeup` where the `device-name` is from the `grep . /sys/bus/usb/devices/*/power/wakeup` command
