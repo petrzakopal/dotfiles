@@ -24,7 +24,9 @@ lsp.ensure_installed({ 'tsserver', 'eslint', 'clangd', 'lua_ls', 'tailwindcss', 
 'texlab' })
 
 require('lspconfig').clangd.setup {
-    cmd = {'clangd', '--background-index', '--compile-commands-dir', '.', '--query-driver=/usr/bin/*'},
+    cmd = {'clangd', '--background-index',
+        --'--compile-commands-dir', '.',
+        '--query-driver=/usr/bin/*'},
 --    init_options = {
 --        clangdFileStatus = true,
 --        clangdSemanticHighlighting = true
