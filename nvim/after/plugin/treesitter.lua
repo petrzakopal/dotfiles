@@ -12,15 +12,12 @@ require'nvim-treesitter.configs'.setup {
 
   highlight = {
     enable = true,
+
   },
-
-
-    -- For dealing with bad auto indent in python files
-    -- Should work according to the Reddit
-    indent = {
-        enable = true,
-        disable = {"python"}
-      },
+  indent = {
+    enable = true,
+    disable = {"python", "c"}
+  },
 
    additional_vim_regex_highlighting = false,
 }
