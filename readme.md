@@ -84,6 +84,9 @@ install fd-find [fd](https://github.com/sharkdp/fd)
 ```bash
 sudo apt install fd-find
 ```
+```text
+Note that the binary is called fdfind as the binary name fd is already used by another package. It is recommended that after installation, you add a link to fd by executing command ln -s $(which fdfind) ~/.local/bin/fd, in order to use fd in the same way as in this documentation. Make sure that $HOME/.local/bin is in your $PATH.
+```
 
 install [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
 
