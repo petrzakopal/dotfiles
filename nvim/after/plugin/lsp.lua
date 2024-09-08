@@ -21,7 +21,7 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 require('lspconfig').verible.setup {
 }
 
-lsp.ensure_installed({ 'tsserver', 'eslint', 'lua_ls', 'tailwindcss',
+lsp.ensure_installed({ 'ts_ls', 'eslint', 'lua_ls', 'tailwindcss',
     'clangd',
     --'pylsp',
     "pyright",

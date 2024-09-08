@@ -7,3 +7,4 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 
 -- grep and find text in project
+require('telescope').load_extension('fzf')

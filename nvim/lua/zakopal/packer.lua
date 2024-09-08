@@ -4,104 +4,104 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
 
-use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.2',
--- or                            , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} }
-}
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.2',
+        -- or                            , branch = '0.1.x',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
--- used for rose-pine colorscheme
---	use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
---		vim.cmd('colorscheme rose-pine')
---	end
---	})
-use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- used for rose-pine colorscheme
+    --	use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
+    --		vim.cmd('colorscheme rose-pine')
+    --	end
+    --	})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
-use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v2.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {                                      -- Optional
-      'williamboman/mason.nvim',
-      run = function()
-        pcall(vim.api.nvim_command, 'MasonUpdate')
-      end,
-    },
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' }, -- Required
+            {                  -- Optional
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.api.nvim_command, 'MasonUpdate')
+                end,
+            },
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},     -- Required
-    {'hrsh7th/cmp-nvim-lsp'}, -- Required
-    {'L3MON4D3/LuaSnip'},     -- Required
-  }
-}
-
-
-use ({"olimorris/onedarkpro.nvim", config = function()
-	vim.cmd('colorscheme onedark_dark')
-end
-})
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'L3MON4D3/LuaSnip' }, -- Required
+        }
+    }
 
 
-use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-}
+    use({
+        "olimorris/onedarkpro.nvim",
+        config = function()
+            vim.cmd('colorscheme onedark_dark')
+        end
+    })
 
 
-use {
-	"ThePrimeagen/vim-be-good",
-}
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 
 
---use {
---	"echasnovski/mini.statusline",
---    config = function ()
---        require("mini.statusline").setup({
---            use_icons = true
---        })
---    end
---}
-use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-}
+    use {
+        "ThePrimeagen/vim-be-good",
+    }
 
 
- use {
-    'windwp/nvim-ts-autotag',
-    opt = true,
-    ft = 'typescriptreact',
-    requires = {{'nvim-treesitter/nvim-treesitter'}},
-    config = function() require('nvim-ts-autotag').setup() end,
-  }
+    --use {
+    --	"echasnovski/mini.statusline",
+    --    config = function ()
+    --        require("mini.statusline").setup({
+    --            use_icons = true
+    --        })
+    --    end
+    --}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
 
--- use {
- -- 'prettier/vim-prettier',
- --run = 'yarn install',
- --ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
- --}
-
---use {
---    'sbdchd/neoformat'
---}
+    use {
+        'windwp/nvim-ts-autotag',
+        opt = true,
+        ft = 'typescriptreact',
+        requires = { { 'nvim-treesitter/nvim-treesitter' } },
+        config = function() require('nvim-ts-autotag').setup() end,
+    }
 
 
+    -- use {
+    -- 'prettier/vim-prettier',
+    --run = 'yarn install',
+    --ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'graphql', 'markdown', 'vue', 'html'}
+    --}
 
-use('theprimeagen/harpoon')
-
-  use 'rktjmp/lush.nvim'
-
-
-  use "~/.config/nvim/zakopal_theme"
-  end)
+    --use {
+    --    'sbdchd/neoformat'
+    --}
 
 
 
+    use('theprimeagen/harpoon')
+
+    use 'rktjmp/lush.nvim'
+
+
+    use "~/.config/nvim/zakopal_theme"
+end)

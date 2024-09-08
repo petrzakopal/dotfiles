@@ -31,3 +31,5 @@ vim.g.mapleader = " "
 
 --clipboard
 vim.opt.clipboard:append("unnamedplus")
+
+vim.opt.ignorecase = true

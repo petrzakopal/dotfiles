@@ -77,6 +77,19 @@ and zsh-syntah-highlighting [https://github.com/zsh-users/zsh-syntax-highlightin
 
 with oh-my-zsh `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
+**for fast neovim search**
+
+install fd-find [fd](https://github.com/sharkdp/fd)
+
+```bash
+sudo apt install fd-find
+```
+
+install [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
+
+```bash
+sudo apt install ripgrep
+```
 
 set default terminal in tmux
 
