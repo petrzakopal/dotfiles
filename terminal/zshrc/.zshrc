@@ -6,9 +6,9 @@ export JAVA_HOME="/usr/local/jdk-21.0.1"
 export PATH=$JAVA_HOME/bin:$PATH
 
 # For LaTeX
- export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
- export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
- export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+ export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+ export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
+ export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -78,14 +78,16 @@ fd() {
 
 # Make packages available in zsh when installed in bash
 source ~/.nvm/nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "nvm use node &>/dev/null"
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#eval "nvm use node &>/dev/null"
 
 
-xset r rate 250 50
+xset r rate 250 170
 
 # For pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+
+
 
