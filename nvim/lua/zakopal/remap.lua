@@ -26,3 +26,6 @@ vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose)
 --vim.keymap.set("n", "<C-K>", vim.cmd.bprev)
 -- Unload buffer
 --vim.keymap.set("n", "<leader>bd", vim.cmd.bd)
+
+vim.keymap.set("n", "<leader>ntt", vim.cmd.NERDTreeToggle)
+vim.keymap.set("n", "<leader>ntc", vim.cmd.NERDTreeClose)
