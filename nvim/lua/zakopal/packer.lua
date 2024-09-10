@@ -103,9 +103,9 @@ use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use 'rktjmp/lush.nvim'
 
     -- not netrw support
-    use('ryanoasis/vim-devicons')
+    --use('ryanoasis/vim-devicons')
     -- for vim-devicons support
-    use('preservim/nerdtree')
+    --use('preservim/nerdtree')
 
     use "~/.config/nvim/zakopal_theme"
 end)
