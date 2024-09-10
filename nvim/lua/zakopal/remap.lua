@@ -30,4 +30,4 @@ vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose)
 
 vim.keymap.set("n", "<leader>/", vim.cmd.NERDTreeToggle)
 -- vim.keymap.set("n", "<leader>ntc", vim.cmd.NERDTreeClose)
-vim.keymap.set("n", "<leader>pv", vim.cmd.NERDTreeExplore)
+vim.keymap.set("n", "<leader>pv", vim.cmd.NERDTreeExplore) -- original
