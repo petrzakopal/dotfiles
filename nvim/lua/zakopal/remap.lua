@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- netrw
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Default tabs in neovim
 -- New tab
@@ -29,3 +30,4 @@ vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose)
 
 vim.keymap.set("n", "<leader>ntt", vim.cmd.NERDTreeToggle)
 vim.keymap.set("n", "<leader>ntc", vim.cmd.NERDTreeClose)
+vim.keymap.set("n", "<leader>pv", vim.cmd.NERDTreeExplore)
