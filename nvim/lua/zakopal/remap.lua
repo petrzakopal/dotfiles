@@ -28,6 +28,9 @@ vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose)
 -- Unload buffer
 --vim.keymap.set("n", "<leader>bd", vim.cmd.bd)
 
-vim.keymap.set("n", "<leader>/", vim.cmd.NERDTreeToggle)
+--vim.keymap.set("n", "<leader>/", vim.cmd.NERDTreeToggle)
 -- vim.keymap.set("n", "<leader>ntc", vim.cmd.NERDTreeClose)
 vim.keymap.set("n", "<leader>pv", vim.cmd.NERDTreeExplore) -- original
+vim.keymap.set("n", "<leader>/", function()
+  vim.cmd("NERDTree %")
+end, { noremap = true, silent = true })
