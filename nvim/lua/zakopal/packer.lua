@@ -108,5 +108,5 @@ use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     --use('preservim/nerdtree')
 
     use "~/.config/nvim/zakopal_theme"
-    use "f-person/git-blame.nvim"
+--    use "f-person/git-blame.nvim"
 end)
