@@ -79,7 +79,7 @@ fd() {
 # Make packages available in zsh when installed in bash
 source ~/.nvm/nvm.sh
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-#eval "nvm use node &>/dev/null"
+eval "nvm use node &>/dev/null"
 
 
 xset r rate 250 170
