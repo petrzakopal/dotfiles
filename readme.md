@@ -298,3 +298,23 @@ sudo apt install pavucontrol
 - check which devices are enabled to wake up the system using `grep . /sys/bus/usb/devices/*/power/wakeup`
 - check the device names using ` grep . /sys/bus/usb/devices/*/product`
 - disable the device which should not wake up the system using `echo disabled | sudo tee /sys/bus/usb/devices/<device-name>/power/wakeup` where the `device-name` is from the `grep . /sys/bus/usb/devices/*/power/wakeup` command
+
+# If accidentaly removed WiFi capability
+- [https://askubuntu.com/questions/857226/accidently-deleted-wpa-supplicant](https://askubuntu.com/questions/857226/accidently-deleted-wpa-supplicant)
+
+
+```bash
+iwcondif
+```
+
+```bash
+sudo apt-get install wpasupplicant
+```
+
+```bash
+sudo apt-get install ubuntu-desktop
+```
+
+```bash
+sudo reboot now
+```
