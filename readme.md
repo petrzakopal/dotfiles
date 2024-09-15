@@ -318,3 +318,8 @@ sudo apt-get install ubuntu-desktop
 ```bash
 sudo reboot now
 ```
+
+# VIM mode in chrome
+- use following Chrome Extension
+
+[Vimium - The Hacker's Browser](https://github.com/philc/vimium?tab=readme-ov-file)
