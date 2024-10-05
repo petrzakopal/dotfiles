@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 -- netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+--vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", {desc= "Open parent directory"})
 
 -- Default tabs in neovim
 -- New tab

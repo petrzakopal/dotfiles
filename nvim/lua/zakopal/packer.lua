@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     -- used for rose-pine colorscheme
     --	use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
@@ -28,7 +28,7 @@ use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
         requires = {
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
-            {                  -- Optional
+            {                            -- Optional
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.api.nvim_command, 'MasonUpdate')
@@ -37,9 +37,9 @@ use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
 
@@ -106,7 +106,15 @@ use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     --use('ryanoasis/vim-devicons')
     -- for vim-devicons support
     --use('preservim/nerdtree')
+    
+    use("nvim-tree/nvim-web-devicons")
+    use({
+        "stevearc/oil.nvim",
+        config = function()
+            require("oil").setup()
+        end,
+    })
 
     use "~/.config/nvim/zakopal_theme"
---    use "f-person/git-blame.nvim"
+    --    use "f-person/git-blame.nvim"
 end)
