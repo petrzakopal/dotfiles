@@ -94,20 +94,15 @@ install [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#insta
 sudo apt install ripgrep
 ```
 
-set default terminal in tmux
 
-```bash
-cd ~
-touch .tmux.conf
-echo set-option -g default-shell /bin/zsh > .tmux.conf
-echo setw -g mode-keys vi > .tmux.conf
-echo bind P paste-buffer > .tmux.conf
-echo bind-key -T copy-mode-vi v send-keys -X begin-selection > .tmux.conf
-echo bind-key -T copy-mode-vi y send-keys -X copy-selection > .tmux.conf
-echo bind-key -T copy-mode-vi r send-keys -X rectangle-toggle > .tmux.conf
-echo set-option -g history-limit 100000 > .tmux.conf
-tmux kill-server
+# Tmux conf
 
+```sh
+cp tmux/.tmux.conf ~/
+```
+
+```sh
+tmux source ~/.tmux.conf
 ```
 
 for running nvm in zsh when installed in bash run `source ~/.nvm/nvm.sh` - node and pm2 will become available - in .zshrc file for example
@@ -323,3 +318,4 @@ sudo reboot now
 - use following Chrome Extension
 
 [Vimium - The Hacker's Browser](https://github.com/philc/vimium?tab=readme-ov-file)
+
