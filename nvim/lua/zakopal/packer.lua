@@ -106,7 +106,7 @@ return require('packer').startup(function(use)
     --use('ryanoasis/vim-devicons')
     -- for vim-devicons support
     --use('preservim/nerdtree')
-    
+
     use("nvim-tree/nvim-web-devicons")
     use({
         "stevearc/oil.nvim",
@@ -117,4 +117,5 @@ return require('packer').startup(function(use)
 
     use "~/.config/nvim/zakopal_theme"
     --    use "f-person/git-blame.nvim"
+    use { "diegoulloao/neofusion.nvim" }
 end)
