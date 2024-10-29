@@ -118,4 +118,6 @@ return require('packer').startup(function(use)
     use "~/.config/nvim/zakopal_theme"
     --    use "f-person/git-blame.nvim"
     use { "diegoulloao/neofusion.nvim" }
+
+ --   use {"lukas-reineke/indent-blankline.nvim"}
 end)

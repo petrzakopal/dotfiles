@@ -345,7 +345,7 @@ local theme = lush(function(injected_functions)
     sym"@lsp.type.class"                                 { fg="#e5c07b", }, -- @lsp.type.class xxx guifg=#e5c07b
     sym"@lsp.type.enumMember"                            { fg="#2bbac5", }, -- @lsp.type.enumMember xxx guifg=#2bbac5
     sym"@lsp.type.interface"                             { fg="#e5c07b", }, -- @lsp.type.interface xxx guifg=#e5c07b
-    MatchParen                                           { fg="#2bbac5", }, -- MatchParen     xxx guifg=#2bbac5
+    MatchParen                                           { fg="#2bbac5", bg="#212121" }, -- MatchParen     xxx guifg=#2bbac5
     Ignore                                               { fg="bg", }, -- Ignore         xxx ctermfg=0 guifg=bg
     NvimInternalError                                    { fg="red", bg="red", }, -- NvimInternalError xxx ctermfg=9 ctermbg=9 guifg=Red guibg=Red
     NvimFigureBrace                                      { NvimInternalError }, -- NvimFigureBrace xxx links to NvimInternalError
