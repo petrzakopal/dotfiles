@@ -239,3 +239,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip
 
 # For enabling Matlab floating windows for figures
 for_window [title="^Fig."] floating enable
+
+# Remap keys
+
+exec setxkbmap -layout pz
