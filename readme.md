@@ -319,3 +319,9 @@ sudo reboot now
 
 [Vimium - The Hacker's Browser](https://github.com/philc/vimium?tab=readme-ov-file)
 
+
+# Insert a new line in the terminal
+
+[Inserting Newlines at the Bash Command Prompt](https://unix.stackexchange.com/questions/534109/inserting-newlines-at-the-bash-command-prompt)
+
+Use `Ctr+V` followed by `Ctr+J`.
