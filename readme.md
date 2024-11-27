@@ -325,3 +325,13 @@ sudo reboot now
 [Inserting Newlines at the Bash Command Prompt](https://unix.stackexchange.com/questions/534109/inserting-newlines-at-the-bash-command-prompt)
 
 Use `Ctr+V` followed by `Ctr+J`.
+
+# Convert MP4 to GIF using ffmpeg
+```sh
+ffmpeg -i input-file.mp4 -r 15 -ss 00:00:00 -to 00:00:00 -vf "split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" output-file.gif
+```
+
+- `-r`: FPS
+- `-ss`: start
+- `-to`: end
+- `-vf ".."`: conversion with modified pallet
