@@ -1,5 +1,28 @@
+-- Reserve a space in the gutter
+-- This will avoid an annoying layout shift in the screen
+vim.opt.signcolumn = 'yes'
+
+--vim.diagnostic.config({
+--    virtual_text = false,
+--    severity_sort = true,
+--    float = {
+--        style = 'minimal',
+--        border = 'rounded',
+--        header = '',
+--        prefix = '',
+--    },
+--    signs = {
+--        text = {
+--            [vim.diagnostic.severity.ERROR] = '✘',
+--            [vim.diagnostic.severity.WARN] = '▲',
+--            [vim.diagnostic.severity.HINT] = '⚑',
+--            [vim.diagnostic.severity.INFO] = '»',
+--        },
+--    },
+--})
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
+
 local lsp = require('lspconfig').util.default_config
 lsp.capabilities = vim.tbl_deep_extend(
     'force',
@@ -96,6 +119,14 @@ cmp.setup({
         end,
     },
     mapping = {
+        -- toggle completion menu
+        ['<C-e>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.abort()
+            else
+                cmp.complete()
+            end
+        end),
         -- Confirm selection (use <CR> or <Tab> to confirm)
         --['<CR>'] = cmp.mapping.confirm({ select = true }),
         -- Confirm selection (use <CR> or <Tab> to confirm)
