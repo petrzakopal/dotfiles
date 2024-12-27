@@ -1,14 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/petrzakopal/local/bin:$PATH # not on linux
 # export PATH=/home/petr/.local/bin:$PATH # not on linux
+ZIG_PATH=~/.zig
 export TERM=xterm-256color # for good colors in tmux on linux
-export JAVA_HOME="/usr/local/jdk-21.0.1"
-export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:$ZIG_PATH
 
 # For LaTeX
- export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
- export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
- export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -91,3 +91,11 @@ xset r rate 250 170
 
 
 
+
+
+# bun completions
+[ -s "/home/petr/.bun/_bun" ] && source "/home/petr/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
