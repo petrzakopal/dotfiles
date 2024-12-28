@@ -148,7 +148,8 @@ cmp.setup({
         -- Confirm selection (use <CR> or <Tab> to confirm)
         --['<CR>'] = cmp.mapping.confirm({ select = true }),
         -- Confirm selection (use <CR> or <Tab> to confirm)
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        --['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<C-p>'] = cmp.mapping.select_prev_item(),
         -- Navigate down in the completion menu
         ['<C-n>'] = cmp.mapping.select_next_item(),
