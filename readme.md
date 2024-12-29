@@ -354,3 +354,9 @@ and if so, simlink it using
 ```sh
 sudo ln -s /usr/include/x86_64-linux-gnu/asm /usr/include/asm
 ```
+
+
+# Tmux sessionizer
+Copied from ThePrimeagen's dotfiles and modified for personal usage.
+
+Copy the file to `~/.local/bin` and run `sudo chmod 777 tmux-sessionizer`.
