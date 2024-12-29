@@ -4,19 +4,19 @@ vim.opt.signcolumn = 'yes'
 
 -- Add borders to floating windows
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-  vim.lsp.handlers.hover,
-  {border = "single"}
+    vim.lsp.handlers.hover,
+    { border = "single" }
 )
 
 vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-  vim.lsp.handlers.signature_help,
-  {border = "single"}
+    vim.lsp.handlers.signature_help,
+    { border = "single" }
 )
 
 vim.diagnostic.config({
-  float = {
-    border = 'single'  -- or 'solid'
-  }
+    float = {
+        border = 'single' -- or 'solid'
+    }
 })
 
 --vim.diagnostic.config({
@@ -89,6 +89,7 @@ require('lspconfig').clangd.setup {
     --   }
 }
 
+
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
@@ -155,3 +156,14 @@ cmp.setup({
         ['<C-n>'] = cmp.mapping.select_next_item(),
     }
 })
+
+-- workaround to ingore rust_analyzer error of cancelled request
+for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
+    local default_diagnostic_handler = vim.lsp.handlers[method]
+    vim.lsp.handlers[method] = function(err, result, context, config)
+        if err ~= nil and err.code == -32802 then
+            return
+        end
+        return default_diagnostic_handler(err, result, context, config)
+    end
+end
