@@ -360,3 +360,12 @@ sudo ln -s /usr/include/x86_64-linux-gnu/asm /usr/include/asm
 Copied from ThePrimeagen's dotfiles and modified for personal usage.
 
 Copy the file to `~/.local/bin` and run `sudo chmod 777 tmux-sessionizer`.
+
+It should work that when in `.tmux.conf` file the line `bind-key -r C-f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"`
+is added, and the file is sourced using `tmux source ~/.tmux.conf` the sessionizer would open when pressed `Ctrl+f`.
+
+And when the tmux shortcut for bind key does not work, create a simlink to run it in the terminal using `tms` command.
+
+```sh
+sudo ln -s ~/.local/bin/tmux-sessionizer ~/.local/bin/tms
+```
