@@ -335,3 +335,22 @@ ffmpeg -i input-file.mp4 -r 15 -ss 00:00:00 -to 00:00:00 -vf "split[s0][s1];[s0]
 - `-ss`: start
 - `-to`: end
 - `-vf ".."`: conversion with modified pallet
+
+# Ghostty
+When building ghostty terminal emulator and encountering error with `asm`, install
+
+```sh
+sudo apt install linux-libc-dev
+```
+
+and then check for if linux headers exist
+
+```sh
+ls /usr/include/x86_64-linux-gnu/asm
+```
+
+and if so, simlink it using
+
+```sh
+sudo ln -s /usr/include/x86_64-linux-gnu/asm /usr/include/asm
+```
