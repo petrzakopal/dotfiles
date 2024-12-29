@@ -14,7 +14,5 @@ require("blink.cmp").setup({
     sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
-    -- Corrected spelling and key name
     signature = { enabled = true },
-
 })
