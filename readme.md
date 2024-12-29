@@ -369,3 +369,19 @@ And when the tmux shortcut for bind key does not work, create a simlink to run i
 ```sh
 sudo ln -s ~/.local/bin/tmux-sessionizer ~/.local/bin/tms
 ```
+
+
+# Blink.cmp in Neovim
+
+If not `tag` (`version` is it for `lazy.nvim` which is not used as of 20241229) the libraries are not downloaded as prebuilt and must be build manually.
+
+In other words when not using `tag` defined in the `packer.lua` for the `blink.cmp` the libraries for fuzzy must be compiled.
+
+The files to compile need rust and are present in the path `/home/petr/.local/share/nvim/site/pack/packer/start/blink.cmp`.
+
+There run the command for compilation.
+
+```sh
+cargo build release
+```
+

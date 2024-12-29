@@ -124,4 +124,6 @@ return require('packer').startup(function(use)
     use { "diegoulloao/neofusion.nvim" }
 
     --   use {"lukas-reineke/indent-blankline.nvim"}
+    --
+    use { "saghen/blink.cmp", tag = "v0.8.2"}
 end)

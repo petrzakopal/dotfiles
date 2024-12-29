@@ -44,7 +44,8 @@ local lsp = require('lspconfig').util.default_config
 lsp.capabilities = vim.tbl_deep_extend(
     'force',
     lsp.capabilities,
-    require('cmp_nvim_lsp').default_capabilities()
+    --require('cmp_nvim_lsp').default_capabilities()
+    require('blink.cmp').get_lsp_capabilities()
 )
 
 local lspconfig = require("lspconfig")
@@ -67,7 +68,11 @@ require('mason-lspconfig').setup({
     },
     handlers = {
         function(server_name)
-            require('lspconfig')[server_name].setup({})
+            require('lspconfig')[server_name].setup({
+                config = {
+                    capabilities = require("blink.cmp").get_lsp_capabilities()
+                }
+            })
         end,
     }
 })
@@ -124,38 +129,38 @@ lspconfig.pyright.setup({
 
 
 
-local cmp = require('cmp')
-
-
-cmp.setup({
-    sources = {
-        { name = 'nvim_lsp' },
-    },
-    snippet = {
-        expand = function(args)
-            -- You need Neovim v0.10 to use vim.snippet
-            vim.snippet.expand(args.body)
-        end,
-    },
-    mapping = {
-        -- toggle completion menu
-        ['<C-e>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.abort()
-            else
-                cmp.complete()
-            end
-        end),
-        -- Confirm selection (use <CR> or <Tab> to confirm)
-        --['<CR>'] = cmp.mapping.confirm({ select = true }),
-        -- Confirm selection (use <CR> or <Tab> to confirm)
-        --['<Tab>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
-        -- Navigate down in the completion menu
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-    }
-})
+--local cmp = require('cmp')
+--
+--
+--cmp.setup({
+--    sources = {
+--        { name = 'nvim_lsp' },
+--    },
+--    snippet = {
+--        expand = function(args)
+--            -- You need Neovim v0.10 to use vim.snippet
+--            vim.snippet.expand(args.body)
+--        end,
+--    },
+--    mapping = {
+--        -- toggle completion menu
+--        ['<C-e>'] = cmp.mapping(function(fallback)
+--            if cmp.visible() then
+--                cmp.abort()
+--            else
+--                cmp.complete()
+--            end
+--        end),
+--        -- Confirm selection (use <CR> or <Tab> to confirm)
+--        --['<CR>'] = cmp.mapping.confirm({ select = true }),
+--        -- Confirm selection (use <CR> or <Tab> to confirm)
+--        --['<Tab>'] = cmp.mapping.confirm({ select = true }),
+--        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+--        ['<C-p>'] = cmp.mapping.select_prev_item(),
+--        -- Navigate down in the completion menu
+--        ['<C-n>'] = cmp.mapping.select_next_item(),
+--    }
+--})
 
 -- workaround to ingore rust_analyzer error of cancelled request
 for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
