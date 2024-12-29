@@ -44,8 +44,8 @@ local lsp = require('lspconfig').util.default_config
 lsp.capabilities = vim.tbl_deep_extend(
     'force',
     lsp.capabilities,
-    --require('cmp_nvim_lsp').default_capabilities()
-    require('blink.cmp').get_lsp_capabilities()
+    --require('cmp_nvim_lsp').default_capabilities() -- for old cmp
+    require('blink.cmp').get_lsp_capabilities() -- for blink
 )
 
 local lspconfig = require("lspconfig")
@@ -69,9 +69,10 @@ require('mason-lspconfig').setup({
     handlers = {
         function(server_name)
             require('lspconfig')[server_name].setup({
-                config = {
-                    capabilities = require("blink.cmp").get_lsp_capabilities()
-                }
+                -- set above in the lsp.capabilities
+               -- config = {
+               --     capabilities = require("blink.cmp").get_lsp_capabilities()
+               -- }
             })
         end,
     }
@@ -128,6 +129,7 @@ lspconfig.pyright.setup({
 })
 
 
+-- for old cmp
 
 --local cmp = require('cmp')
 --
