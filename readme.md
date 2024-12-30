@@ -385,3 +385,14 @@ There run the command for compilation.
 cargo build release
 ```
 
+
+# Build Neovim
+When building neovim from the source, convenently use following command.
+
+```sh
+make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Release
+```
+
+And then append the path to the binary in the `.zshrc` file.
+
+And optionally rename the binary file in `neovim/bin/nvim` to `neovim/bin/vim`.
