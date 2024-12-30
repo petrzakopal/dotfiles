@@ -1,10 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/petrzakopal/local/bin:$PATH # not on linux
 # export PATH=/home/petr/.local/bin:$PATH # not on linux
+NEOVIM_PATH=$HOME/neovim/bin
 LOCAL_BIN_PATH=$HOME/.local/bin
 ZIG_PATH=~/.zig
 export TERM=xterm-256color # for good colors in tmux on linux
-export PATH=$PATH:$ZIG_PATH:$LOCAL_BIN_PATH
+export PATH=$PATH:$ZIG_PATH:$LOCAL_BIN_PATH:$NEOVIM_PATH
 
 # For LaTeX
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
