@@ -396,3 +396,16 @@ make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" CMAKE_BUILD_TYPE=Re
 And then append the path to the binary in the `.zshrc` file.
 
 And optionally rename the binary file in `neovim/bin/nvim` to `neovim/bin/vim`.
+
+# Balena etcher
+
+When trying to run balena etcher, there is a GPU problem for me. So I mostly try to run following commands.
+
+```sh
+sudo ./balena-etcher --no-sandbox --disable-gpu-sandbox
+```
+or sometimes
+
+```sh
+./balena-etcher -askpass
+```
