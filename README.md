@@ -409,3 +409,11 @@ or sometimes
 ```sh
 ./balena-etcher -askpass
 ```
+
+# Camera to linux
+[https://www.crackedthecode.co/how-to-use-your-dslr-as-a-webcam-in-linux/](https://www.crackedthecode.co/how-to-use-your-dslr-as-a-webcam-in-linux/) - How to Use Your DSLR Camera as a Webcam in Linux
+Also link from [https://news.ycombinator.com/item?id=23407365](https://news.ycombinator.com/item?id=23407365).
+
+The `v4l2loopback` is probably better obtained from official repository [https://github.com/umlaeute/v4l2loopback](https://github.com/umlaeute/v4l2loopback).
+
+And the command then for running the connection `gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 3 -f v4l2 /dev/video2`.
