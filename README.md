@@ -417,3 +417,15 @@ Also link from [https://news.ycombinator.com/item?id=23407365](https://news.ycom
 The `v4l2loopback` is probably better obtained from official repository [https://github.com/umlaeute/v4l2loopback](https://github.com/umlaeute/v4l2loopback).
 
 And the command then for running the connection `gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 3 -f v4l2 /dev/video2`.
+
+Modprobe command:
+
+```sh
+sudo modprobe v4l2loopback exclusive_caps=1 max_buffers=2
+```
+
+Better command for video settings in camera.
+
+```sh
+gphoto2 --stdout --capture-movie | ffmpeg -i - -vf "scale=1024:576" -vcodec rawvideo -pix_fmt yuv420p -threads 3 -b:v 50M -f v4l2 /dev/video2
+```
