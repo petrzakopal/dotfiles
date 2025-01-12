@@ -421,7 +421,7 @@ And the command then for running the connection `gphoto2 --stdout --capture-movi
 Modprobe command:
 
 ```sh
-sudo modprobe v4l2loopback exclusive_caps=1 max_buffers=2
+sudo modprobe v4l2loopback
 ```
 
 Better command for video settings in camera.
