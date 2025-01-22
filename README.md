@@ -254,6 +254,20 @@ And maybe using this command:
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
+And maybe check the env variable and/or export it or try tu run before the application name.
+
+```sh
+echo $GTK_THEME
+```
+
+```sh
+GTK_THEME=Adwaita-dark nautilus &.
+```
+
+```sh
+export GTK_THEME=Adwaita-dark
+```
+
 # Sound manager for Linux i3
 When the sound cannot be controlled using buttons, install [pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/) and the buttons should start working.
 
