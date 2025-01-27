@@ -443,3 +443,9 @@ Better command for video settings in camera.
 ```sh
 gphoto2 --stdout --capture-movie | ffmpeg -i - -vf "scale=1024:576" -vcodec rawvideo -pix_fmt yuv420p -threads 3 -b:v 50M -f v4l2 /dev/video2
 ```
+
+# Import wireguard VPN configuration
+
+```sh
+nmcli connection import type wireguard file ./name_of_the_file.conf
+```
