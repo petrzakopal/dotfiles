@@ -125,5 +125,7 @@ return require('packer').startup(function(use)
 
     --   use {"lukas-reineke/indent-blankline.nvim"}
     --
-    use { "saghen/blink.cmp", tag = "v0.8.2"}
+    use { "saghen/blink.cmp", tag = "v0.8.2" }
+
+    use { "folke/tokyonight.nvim" }
 end)
