@@ -1,1 +1,1 @@
- vim.cmd("colorscheme zakopal_theme")
+ --vim.cmd("colorscheme zakopal_theme")

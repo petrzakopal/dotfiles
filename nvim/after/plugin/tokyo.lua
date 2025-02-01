@@ -60,5 +60,19 @@ require("tokyonight").setup({
         hl.Visual = { bg = colors.bg_visual }
         hl.Search = { bg = colors.bg_search, fg = colors.fg }
         hl.IncSearch = { bg = colors.orange, fg = colors.black }
+
+        hl.TelescopeSelection = { bg = colors.bg_visual, fg = colors.fg }
+        hl.TelescopeSelectionCaret = { bg = colors.bg_visual, fg = colors.blue }
+        hl.TelescopeMultiSelection = { bg = colors.bg_visual, fg = colors.fg }
+        hl.TelescopeNormal = { bg = "NONE", fg = colors.fg }
+        hl.TelescopeBorder = { bg = "NONE", fg = colors.blue0 }
+        hl.TelescopePromptBorder = { bg = "NONE", fg = colors.blue0 }
+        hl.TelescopeResultsBorder = { bg = "NONE", fg = colors.blue0 }
+        hl.TelescopePreviewBorder = { bg = "NONE", fg = colors.blue0 }
+        hl.TelescopeMatching = { bg = "NONE", fg = colors.teal }
+        hl.TelescopePromptPrefix = { bg = "NONE", fg = colors.blue }
     end,
 })
+
+vim.cmd("colorscheme tokyonight-night")
+ 
