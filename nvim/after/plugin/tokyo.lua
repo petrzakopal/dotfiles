@@ -4,7 +4,7 @@ require("tokyonight").setup({
         -- Disable background for all syntax elements
         comments = { bg = "NONE" },
         keywords = { bg = "NONE" },
-        functions = { bg = "NONE" },
+        functions = { bg = "NONE", bold = true },
         variables = { bg = "NONE" },
         strings = { bg = "NONE" },
         numbers = { bg = "NONE" },
@@ -24,7 +24,7 @@ require("tokyonight").setup({
 
         hl.Comment = { bg = "NONE", fg = colors.comment }
         hl.Keyword = { bg = "NONE", fg = colors.keyword }
-        hl.Function = { bg = "NONE", fg = colors.func }
+        hl.Function = { bg = "NONE", fg = colors.func, bold = true }
         hl.Variable = { bg = "NONE", fg = colors.fg }
         hl.String = { bg = "NONE", fg = colors.string }
         hl.Number = { bg = "NONE", fg = colors.number }
@@ -33,7 +33,7 @@ require("tokyonight").setup({
 
         -- TypeScript/JavaScript specific
         hl.TSKeyword = { bg = "NONE", fg = colors.keyword }
-        hl.TSKeywordFunction = { bg = "NONE", fg = colors.keyword }
+        hl.TSKeywordFunction = { bg = "NONE", fg = colors.keyword, bold = true }
         hl.TSKeywordReturn = { bg = "NONE", fg = colors.keyword }
         hl.TSKeywordOperator = { bg = "NONE", fg = colors.keyword }
         hl.TSConstant = { bg = "NONE", fg = colors.purple }
@@ -47,7 +47,7 @@ require("tokyonight").setup({
         
         -- TreeSitter specific groups
         hl["@keyword"] = { bg = "NONE", fg = colors.keyword }
-        hl["@keyword.function"] = { bg = "NONE", fg = colors.keyword }
+        hl["@keyword.function"] = { bg = "NONE", fg = colors.keyword, bold = true }
         hl["@keyword.return"] = { bg = "NONE", fg = colors.keyword }
         hl["@keyword.operator"] = { bg = "NONE", fg = colors.keyword }
         hl["@constant"] = { bg = "NONE", fg = colors.purple }
