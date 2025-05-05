@@ -51,7 +51,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec /home/petr/.cargo/bin/alacritty
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -128,7 +129,6 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-# qwerty-mac layout
 bindsym $mod+plus workspace number $ws1
 bindsym $mod+ecaron workspace number $ws2
 bindsym $mod+scaron workspace number $ws3
@@ -139,18 +139,6 @@ bindsym $mod+yacute workspace number $ws7
 bindsym $mod+aacute workspace number $ws8
 bindsym $mod+iacute workspace number $ws9
 bindsym $mod+eacute workspace number $ws10
-
-# coder
-#bindsym $mod+1 workspace number $ws1
-#bindsym $mod+2 workspace number $ws2
-#bindsym $mod+3 workspace number $ws3
-#bindsym $mod+4 workspace number $ws4
-#bindsym $mod+5 workspace number $ws5
-#bindsym $mod+6 workspace number $ws6
-#bindsym $mod+7 workspace number $ws7
-#bindsym $mod+8 workspace number $ws8
-#bindsym $mod+9 workspace number $ws9
-#bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -225,21 +213,23 @@ exec --no-startup-id xset r rate 250 50
 # apt-get install maim xclip copyq xdtool xdotool
 
 ##  Screenshots in files
-bindsym Print exec --no-startup-id maim --format=png "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
-bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
-bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+#bindsym Print exec --no-startup-id maim --format=png "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
+#bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
+#bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
 
 ## Screenshots in clipboards
-bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+#bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
+#bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+#bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id flameshot gui --clipboard
 
 
 # Bar
 
 # For enabling Matlab floating windows for figures
-for_window [title="^Fig."] floating enable
+for_window [title="^Fig"] floating enable
+#for_window [title=".*Simulink.*"] floating enable
 
-# Remap keys
+# Keys
 
 exec setxkbmap -layout pz
