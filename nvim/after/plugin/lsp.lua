@@ -17,7 +17,7 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
 
 vim.diagnostic.config({
     float = {
-        border = 'single' -- or 'solid'
+        border = 'rounded' -- or 'solid'
     }
 })
 
@@ -59,6 +59,24 @@ require('lspconfig').verible.setup {
 }
 
 require('lspconfig').tailwindcss.setup {
+    capabilities = lsp.capabilities,
+    settings = {
+        tailwindCSS = {
+            filetypes = {
+                "css",
+                "scss",
+                "sass",
+                "html",
+                "heex",
+                "elixir",
+                "javascript",
+                "javascriptreact",
+                "typescript",
+                "typescriptreact",
+                "svelte",
+            },
+        }
+    }
 }
 
 
