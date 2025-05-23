@@ -75,6 +75,9 @@ require('mason-lspconfig').setup({
                -- }
             })
         end,
+    },
+    automatic_enable = {
+
     }
 })
 require('lspconfig').clangd.setup {
