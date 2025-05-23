@@ -1,5 +1,4 @@
 require("blink.cmp").setup({
-    --version = "v0.8.2",
     keymap = { preset = 'default' },
 
     appearance = {

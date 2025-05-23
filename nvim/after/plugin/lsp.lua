@@ -2,6 +2,7 @@
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = 'yes'
 
+
 -- Add borders to floating windows
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
     vim.lsp.handlers.hover,
@@ -13,11 +14,13 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
     { border = "single" }
 )
 
+
 vim.diagnostic.config({
     float = {
         border = 'single' -- or 'solid'
     }
 })
+
 
 --vim.diagnostic.config({
 --    virtual_text = false,
@@ -53,6 +56,9 @@ local lspconfig = require("lspconfig")
 
 -- Ensure the verible binaries are installed from chipsalliance/verible GitHub
 require('lspconfig').verible.setup {
+}
+
+require('lspconfig').tailwindcss.setup {
 }
 
 
