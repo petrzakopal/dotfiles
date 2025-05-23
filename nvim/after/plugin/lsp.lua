@@ -55,6 +55,7 @@ local lspconfig = require("lspconfig")
 require('lspconfig').verible.setup {
 }
 
+
 -- Mason config with ensure installed
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -66,20 +67,18 @@ require('mason-lspconfig').setup({
         --    "pyright",
         --    'texlab',
     },
-    handlers = {
-        function(server_name)
-            require('lspconfig')[server_name].setup({
-                -- set above in the lsp.capabilities
-               -- config = {
-               --     capabilities = require("blink.cmp").get_lsp_capabilities()
-               -- }
-            })
-        end,
-    },
-    automatic_enable = {
-
-    }
+    --handlers = {
+    --    function(server_name)
+    --        require('lspconfig')[server_name].setup({
+    --            -- set above in the lsp.capabilities
+    --           -- config = {
+    --           --     capabilities = require("blink.cmp").get_lsp_capabilities()
+    --           -- }
+    --        })
+    --    end,
+    --},
 })
+
 require('lspconfig').clangd.setup {
     cmd = { 'clangd', '--background-index',
         --'--compile-commands-dir', '.',
