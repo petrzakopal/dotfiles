@@ -67,6 +67,7 @@ require('mason-lspconfig').setup({
         --    "pyright",
         --    'texlab',
     },
+    auto_install = true,
     --handlers = {
     --    function(server_name)
     --        require('lspconfig')[server_name].setup({
