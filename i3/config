@@ -233,3 +233,6 @@ for_window [title="^Fig"] floating enable
 # Keys
 
 exec setxkbmap -layout pz
+
+# Mouse scrolling
+exec xinput set-prop "Rapoo BT Mouse" "libinput Natural Scrolling Enabled" 1
