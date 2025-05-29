@@ -6,7 +6,7 @@ vim.keymap.set('n', '<leader>pf', function()
 end, {})
 
 -- Search for buffers without preview
-vim.keymap.set('n', '<leader>fb', function()
+vim.keymap.set('n', '<leader>bf', function()
   builtin.buffers({ previewer = false })
 end, {})
 
