@@ -1,10 +1,21 @@
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {}) -- search for files with fuzzy finder
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- search for buffers
 
+-- Search for files without preview
+vim.keymap.set('n', '<leader>pf', function()
+  builtin.find_files({ previewer = false })
+end, {})
+
+-- Search for buffers without preview
+vim.keymap.set('n', '<leader>fb', function()
+  builtin.buffers({ previewer = false })
+end, {})
+
+-- Search with grep and no preview
 vim.keymap.set('n', '<leader>ps', function()
-                            builtin.grep_string({ search = vim.fn.input("Grep > ") });
+  builtin.grep_string({
+    search = vim.fn.input("Grep > "),
+    previewer = false
+  })
 end)
-
 -- grep and find text in project
 --require('telescope').load_extension('fzf')
