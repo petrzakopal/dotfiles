@@ -449,3 +449,11 @@ gphoto2 --stdout --capture-movie | ffmpeg -i - -vf "scale=1024:576" -vcodec rawv
 ```sh
 nmcli connection import type wireguard file ./name_of_the_file.conf
 ```
+# Tree-sitter using rust
+
+```sh
+cargo install tree-sitter-cli --force
+
+# or using npm
+npm install -g tree-sitter-cli
+```
