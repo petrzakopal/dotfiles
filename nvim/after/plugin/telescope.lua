@@ -1,7 +1,7 @@
 local builtin = require('telescope.builtin')
 
 -- Search for files without preview
-vim.keymap.set('n', '<leader>pf', function()
+vim.keymap.set('n', '<leader>f', function()
   builtin.find_files({ previewer = false })
 end, {})
 
