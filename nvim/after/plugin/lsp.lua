@@ -83,25 +83,43 @@ require('lspconfig').tailwindcss.setup {
 -- Mason config with ensure installed
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    -- Replace the language servers listed here
-    -- with the ones you want to install
-    ensure_installed = { "ts_ls", 'eslint', 'lua_ls', 'tailwindcss',
-        --    'clangd',
-        --    --'pylsp',
-        --    "pyright",
-        --    'texlab',
+    ensure_installed = {  'eslint', 'lua_ls', 'tailwindcss' },
+    automatic_installation = true,
+    automatic_enable = {
+        exclude = {
+            "ts_ls",
+            "clangd"
+        }
     },
-    auto_install = true,
     --handlers = {
-    --    function(server_name)
-    --        require('lspconfig')[server_name].setup({
-    --            -- set above in the lsp.capabilities
-    --           -- config = {
-    --           --     capabilities = require("blink.cmp").get_lsp_capabilities()
-    --           -- }
-    --        })
-    --    end,
     --},
+})
+
+require('lspconfig').ts_ls.setup({
+    capabilities = lsp.capabilities,
+    init_options = {
+        preferences = {
+            preferTypeOnlyAutoImports = true,
+            importModuleSpecifierPreference = 'non-relative',
+            importModuleSpecifierEnding = 'minimal',
+            includeAutomaticOptionalChainCompletions = true,
+        },
+    },
+    settings = {
+        typescript = {
+            preferences = {
+                preferTypeOnlyAutoImports = true,
+            },
+        },
+        javascript = {
+            preferences = {
+                preferTypeOnlyAutoImports = true,
+            },
+        },
+    },
+    on_attach = function(client, bufnr)
+        -- your on_attach
+    end,
 })
 
 require('lspconfig').clangd.setup {
@@ -122,6 +140,26 @@ require('lspconfig').clangd.setup {
     --   }
 }
 
+
+--require('lspconfig').ts_ls.setup({
+--    capabilities = lsp.capabilities,
+--    settings = {
+--        typescript = {
+--            preferences = {
+--                preferTypeOnlyAutoImports = true,
+--            },
+--        },
+--        javascript = {
+--            preferences = {
+--                preferTypeOnlyAutoImports = true,
+--            },
+--        },
+--    },
+--    on_attach = function(client, bufnr)
+--        -- your on_attach code, keymaps, etc
+--    end,
+--})
+--
 
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
