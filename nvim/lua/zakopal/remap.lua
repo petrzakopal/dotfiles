@@ -13,6 +13,9 @@ vim.keymap.set("n", "<leader>tP", vim.cmd.tabprevious)
 -- Close a tab
 vim.keymap.set("n", "<leader>tc", vim.cmd.tabclose)
 
+-- Undotree
+vim.keymap.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
+
 -- Prettier remap from :Prettier
 --vim.keymap.set("n", "<leader>pr", vim.cmd.PrettierAsync)
 
