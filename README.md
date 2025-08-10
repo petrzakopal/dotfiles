@@ -457,3 +457,17 @@ cargo install tree-sitter-cli --force
 # or using npm
 npm install -g tree-sitter-cli
 ```
+
+## Saving ssh servers with port
+
+If there is a desire to save ssh with port to be able to easily connect to it
+update the file `~/.ssh/config` with the following content
+
+```sh
+Host <name>
+  HostName <ip>
+  User <user>
+  Port <port>
+```
+
+and then connect to the server using `ssh <name>`.
