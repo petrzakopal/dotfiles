@@ -62,9 +62,9 @@ xkb_symbols "pz" {
 
     key <SPCE>	{[     space,      space, nobreakspace, nobreakspace ]};
 
-    //key <CAPS>	{[ Escape ]};
-    key <CAPS> { [ backslash, bar ] };  // Caps Lock → '\'
-    key <END>  { [ Super_L ] };         // End → Left GUI
+    key <CAPS>	{[ Escape ]};
+    //key <CAPS> { [ backslash, bar ] };  // Caps Lock → '\'
+    key <HOME>  { [ Super_L ] };         // End → Left GUI
 
     include "level3(ralt_switch)"
 };
