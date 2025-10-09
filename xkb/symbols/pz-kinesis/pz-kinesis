@@ -64,8 +64,8 @@ xkb_symbols "pz-kinesis" {
 
     //key <CAPS>	{[ Escape ]};
     key <CAPS> { [ backslash, bar ] };  // Caps Lock → '\'
-    key <HOME>  { [ ISO_Level3_Shift ] };         // End → Left GUI
-    key <END>  { [ Super_L] };         // End → Right Alt
+    key <HOME>  { [ Super_L ] };         // End → Left GUI
+    key <END>  { [ ISO_Level3_Shift ] };         // End → Right Alt
 
     include "level3(ralt_switch)"
 };
