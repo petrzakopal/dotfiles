@@ -9,9 +9,9 @@ export TERM=xterm-256color # for good colors in tmux on linux
 export PATH=$PATH:$ZIG_PATH:$LOCAL_BIN_PATH:$NEOVIM_PATH:$GHOSTTY_PATH
 
 # For LaTeX
-export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2025/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2026/texmf-dist/doc/info:$INFOPATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
