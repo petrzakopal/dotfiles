@@ -118,6 +118,8 @@ vim.lsp.config("ts_ls", {
     end,
 })
 
+vim.lsp.enable({"ts_ls"})
+
 
 vim.lsp.config("clangd", {
     cmd = { 'clangd', '--background-index',
@@ -137,6 +139,7 @@ vim.lsp.config("clangd", {
     --   }
 })
 
+vim.lsp.enable({ "clangd"})
 
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
