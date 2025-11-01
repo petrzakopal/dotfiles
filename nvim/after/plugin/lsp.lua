@@ -43,23 +43,17 @@ vim.diagnostic.config({
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
 
-local lsp = require('lspconfig').util.default_config
-lsp.capabilities = vim.tbl_deep_extend(
-    'force',
-    lsp.capabilities,
-    --require('cmp_nvim_lsp').default_capabilities() -- for old cmp
-    require('blink.cmp').get_lsp_capabilities() -- for blink
+--local lsp = require('lspconfig').util.default_config
+
+vim.lsp.config.capabilities = vim.tbl_deep_extend(
+  'force',
+  vim.lsp.config.capabilities or vim.lsp.protocol.make_client_capabilities(),
+  require('blink.cmp').get_lsp_capabilities()
 )
 
-local lspconfig = require("lspconfig")
 
-
--- Ensure the verible binaries are installed from chipsalliance/verible GitHub
-require('lspconfig').verible.setup {
-}
-
-require('lspconfig').tailwindcss.setup {
-    capabilities = lsp.capabilities,
+vim.lsp.config("tailwindcss", {
+    capabilities = vim.lsp.config.capabilities,
     settings = {
         tailwindCSS = {
             filetypes = {
@@ -77,13 +71,14 @@ require('lspconfig').tailwindcss.setup {
             },
         }
     }
-}
+
+})
 
 
 -- Mason config with ensure installed
 require('mason').setup({})
 require('mason-lspconfig').setup({
-    ensure_installed = {  'eslint', 'lua_ls', 'tailwindcss' },
+    ensure_installed = { 'eslint', 'lua_ls', 'tailwindcss' },
     automatic_installation = true,
     automatic_enable = {
         exclude = {
@@ -95,8 +90,9 @@ require('mason-lspconfig').setup({
     --},
 })
 
-require('lspconfig').ts_ls.setup({
-    capabilities = lsp.capabilities,
+
+vim.lsp.config("ts_ls", {
+    capabilities = vim.lsp.config.capabilities,
     init_options = {
         preferences = {
             preferTypeOnlyAutoImports = true,
@@ -122,7 +118,8 @@ require('lspconfig').ts_ls.setup({
     end,
 })
 
-require('lspconfig').clangd.setup {
+
+vim.lsp.config("clangd", {
     cmd = { 'clangd', '--background-index',
         --'--compile-commands-dir', '.',
         '--query-driver=/usr/bin/*' },
@@ -138,28 +135,8 @@ require('lspconfig').clangd.setup {
     --           ['fallbackFlags'] = {'-std=c++17'}
     --       }
     --   }
-}
+})
 
-
---require('lspconfig').ts_ls.setup({
---    capabilities = lsp.capabilities,
---    settings = {
---        typescript = {
---            preferences = {
---                preferTypeOnlyAutoImports = true,
---            },
---        },
---        javascript = {
---            preferences = {
---                preferTypeOnlyAutoImports = true,
---            },
---        },
---    },
---    on_attach = function(client, bufnr)
---        -- your on_attach code, keymaps, etc
---    end,
---})
---
 
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
@@ -188,8 +165,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
-lspconfig.pyright.setup({
-    on_attach = lsp.on_attach,
+vim.lsp.config("pyright", {
+    on_attach = vim.lsp.on_attach,
     filetypes = { "python" },
 })
 
