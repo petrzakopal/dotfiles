@@ -471,3 +471,14 @@ Host <name>
 ```
 
 and then connect to the server using `ssh <name>`.
+
+## Copying files to USB drive
+
+When copying the files to the USB drive and cannot disconnect the USB drive, check for the flow of the data in memory.
+
+```sh
+watch -n 1 "grep -E 'Dirty|Writeback' /proc/meminfo"
+```
+
+- Writeback is huge - kernel is actively dumping to drive (for example sda)
+- Dirty is still big - more data waiting in RAM
