@@ -482,3 +482,22 @@ watch -n 1 "grep -E 'Dirty|Writeback' /proc/meminfo"
 
 - Writeback is huge - kernel is actively dumping to drive (for example sda)
 - Dirty is still big - more data waiting in RAM
+
+## Typhoon HIL
+
+When typhoon HIL crashes when opening the model startup python script or when trying to edit the widget in the SCADA, there may be a problem with the graphics stack.
+
+According to the debugging session with LLM, the problem is as follows.
+
+
+```text
+Qt6 chose the GLX path on X11, and your Mesa/GLVND exposes a GLX that initializes but is unusable for QtQuick / QtWebEngine surfaces.
+```
+
+The brief LLM summary from the debugging session is available at [typhoon_hil/xcb_gl_integration_error.md](./typhoon_hil/xcb_gl_integration_error.md).
+
+To fix the problem, set the environment variable `QT_XCB_GL_INTEGRATION` to `xcb_egl` before running the executable.
+
+```sh
+QT_XCB_GL_INTEGRATION=xcb_egl ./typhoon_hil.exe
+```
