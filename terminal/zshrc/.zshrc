@@ -31,10 +31,10 @@ source $ZSH/oh-my-zsh.sh
 # https://gist.github.com/reinvanoyen/05bcfe95ca9cb5041a4eafd29309ff29
 
 
+COLOR_GIT=$'%F{#9ece6a}'
+COLOR_USR=$'%F{#a9b1d6}'
+COLOR_DIR=$'%F{#7aa2f7}'
 COLOR_DEF=$'%f'
-COLOR_USR=$'%F{243}'
-COLOR_DIR=$'%F{197}'
-COLOR_GIT=$'%F{46}'
 setopt PROMPT_SUBST
 function parse_git_branch() {
 
@@ -80,12 +80,14 @@ fd() {
 
 
 # Make packages available in zsh when installed in bash
-source ~/.nvm/nvm.sh
+#source ~/.nvm/nvm.sh
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval "nvm use node &>/dev/null"
 
 
-xset r rate 250 170
+#xset r rate 250 170
 
 # For pyenv
 #export PYENV_ROOT="$HOME/.pyenv"
@@ -102,3 +104,4 @@ xset r rate 250 170
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
