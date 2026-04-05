@@ -22,7 +22,8 @@ sudo pacman -S --needed --noconfirm \
   zsh \
   networkmanager \
   nm-connection-editor \
-  blueman
+  blueman \
+  fuse2
 
 # Enable services
 sudo systemctl enable --now NetworkManager
