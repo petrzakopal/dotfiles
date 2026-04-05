@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require("nvim-treesitter").setup( {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "javascript", "latex", "typescript" ,"c", "lua", "vim", "vimdoc", "query", "verilog", "python"},
 
@@ -20,4 +20,4 @@ require'nvim-treesitter.configs'.setup {
   },
 
    additional_vim_regex_highlighting = false,
-}
+})
