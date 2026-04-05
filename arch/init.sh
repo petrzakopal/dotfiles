@@ -24,12 +24,12 @@ sudo pacman -S --needed --noconfirm \
   zsh \
   networkmanager \
   nm-connection-editor \
-  blueman \
   fuse2 \
   network-manager-applet \
-  blueman \
-  dunst \
-  fwupd
+  blueman # for bluetooth \
+  dunst # for notifications \
+  fwupd # for firmware upgrades \
+  brightnessctl # for backlight
 
 # Enable services
 sudo systemctl enable --now NetworkManager
