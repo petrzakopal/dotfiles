@@ -14,7 +14,9 @@ fi
 yay -S --needed --noconfirm \
   tree-sitter-cli-git \
   ripgrep \
-  google-chrome
+  google-chrome \
+  thunderbird \
+  fastfetch
 
 # Official packages
 sudo pacman -S --needed --noconfirm \
