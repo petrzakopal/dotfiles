@@ -27,7 +27,8 @@ sudo pacman -S --needed --noconfirm \
   blueman \
   fuse2 \
   network-manager-applet \
-  blueman
+  blueman \
+  dunst
 
 # Enable services
 sudo systemctl enable --now NetworkManager
