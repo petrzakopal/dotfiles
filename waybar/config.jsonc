@@ -225,7 +225,8 @@
   "modules-left": [
   "hyprland/workspaces",
   //"custom/uptime",
-  "cpu"
+  "cpu",
+  "memory"
   ],
 
   "modules-center": ["clock"],
