@@ -37,7 +37,7 @@ return {
             require('mason').setup()
 
             require('mason-lspconfig').setup({
-                ensure_installed = { 'lua_ls', 'eslint', 'tailwindcss' },
+                ensure_installed = { 'lua_ls', 'eslint', 'tailwindcss', "oxlint", "ts_ls"  },
                 automatic_installation = true,
             })
 
