@@ -232,6 +232,7 @@
   "modules-center": ["clock"],
 
   "modules-right": [
+    "custom/flameshot",
     "tray",
     //"bluetooth",
     //"network",
@@ -332,7 +333,6 @@
   },
 
   "tray": {
-  "spacing": 10
-}
-
+      "spacing": 10
+  }
 }

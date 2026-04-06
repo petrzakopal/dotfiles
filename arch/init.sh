@@ -31,6 +31,9 @@ sudo pacman -S --needed --noconfirm \
   fwupd \ # for firmware upgrades
   brightnessctl \ # for backlight
   adw-gtk-theme \ # for dark theme availability
+  flameshot \ # for screenshots
+  grim \ # for screenshots with flameshot
+  slurp \ # for screenshots with flameshot
 
 # Enable services
 sudo systemctl enable --now NetworkManager

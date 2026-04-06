@@ -146,7 +146,8 @@
 #network,
 #custom-lock,
 #battery,
-#tray {
+#tray
+{
   background-color: #1a1b26;
   padding: 0.3rem 0.7rem;
   margin: 5px 0px; 
