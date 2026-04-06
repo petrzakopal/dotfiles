@@ -26,10 +26,11 @@ sudo pacman -S --needed --noconfirm \
   nm-connection-editor \
   fuse2 \
   network-manager-applet \
-  blueman # for bluetooth \
-  dunst # for notifications \
-  fwupd # for firmware upgrades \
-  brightnessctl # for backlight
+  blueman \ # for bluetooth
+  dunst \ # for notifications
+  fwupd \ # for firmware upgrades
+  brightnessctl \ # for backlight
+  adw-gtk-theme \ # for dark theme availability
 
 # Enable services
 sudo systemctl enable --now NetworkManager
