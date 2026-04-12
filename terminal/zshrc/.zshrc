@@ -6,7 +6,7 @@ GHOSTTY_PATH=$HOME/ghostty/bin
 LOCAL_BIN_PATH=$HOME/.local/bin
 ZIG_PATH=~/.zig
 export TERM=xterm-256color # for good colors in tmux on linux
-export PATH=$PATH:$ZIG_PATH:$LOCAL_BIN_PATH:$NEOVIM_PATH:$GHOSTTY_PATH
+export PATH=$ZIG_PATH:$LOCAL_BIN_PATH:$NEOVIM_PATH:$GHOSTTY_PATH:$PATH
 
 # For LaTeX
 export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
@@ -105,3 +105,6 @@ eval "nvm use node &>/dev/null"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+# opencode
+export PATH=/home/petr/.opencode/bin:$PATH
