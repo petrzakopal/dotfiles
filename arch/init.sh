@@ -34,6 +34,7 @@ sudo pacman -S --needed --noconfirm \
   flameshot \ # for screenshots
   grim \ # for screenshots with flameshot
   slurp \ # for screenshots with flameshot
+  lsof \ # for lsof
 
 # Enable services
 sudo systemctl enable --now NetworkManager
