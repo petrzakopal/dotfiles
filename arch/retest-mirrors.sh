@@ -14,6 +14,7 @@ sudo cachyos-rate-mirrors
 # for arch
 rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
 
-
 # refresh the pacman database
 sudo pacman -Syy
+
+# NOTE: Sometimes the VPN is needed from some countries to fetch the AUR packages via https
