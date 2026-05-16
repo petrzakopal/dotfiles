@@ -6,10 +6,13 @@ set -e
 sudo -v
 
 # for cachy OS
-rate-mirrors cachyos | sudo tee /etc/pacman.d/cachyos-mirrorlist
+#rate-mirrors cachyos | sudo tee /etc/pacman.d/cachyos-mirrorlist
 
 # for arch
-rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+#rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+
+# simpler
+sudo cachyos-rate-mirrors
 
 # refresh the pacman database
 sudo pacman -Syy
