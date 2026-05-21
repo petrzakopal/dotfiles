@@ -33,3 +33,5 @@ vim.g.mapleader = " "
 vim.opt.clipboard:append("unnamedplus")
 
 vim.opt.ignorecase = true
+
+vim.opt.colorcolumn = "80"
