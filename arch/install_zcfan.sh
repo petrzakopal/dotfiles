@@ -6,9 +6,9 @@ sudo pacman -S --needed --noconfirm zcfan
 
 echo "Writing /etc/zcfan.conf..."
 sudo tee /etc/zcfan.conf >/dev/null <<'EOF'
-low_temp 55
-med_temp 65
-max_temp 75
+low_temp 45
+med_temp 55
+max_temp 65
 
 temp_hysteresis 5
 watchdog_secs 30
