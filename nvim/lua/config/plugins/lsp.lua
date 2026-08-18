@@ -149,6 +149,19 @@ return {
                     return default(err, result, context, config)
                 end
             end
+
+            vim.lsp.config("rust_analyzer", {
+                settings = {
+                    ["rust-analyzer"] = {
+                        cargo = {
+                            -- when the crate is used in Cargo.toml with optional = true,
+                            -- for the lsp to work the allFeaturs is convenient workaround
+                            allFeatures = true,
+                        },
+                    },
+                },
+            })
+
         end,
     }
 }
