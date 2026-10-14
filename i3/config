@@ -270,3 +270,9 @@ exec setxkbmap -layout pz
 
 # Mouse scrolling
 # exec --no-startup-id xinput set-prop "Rapoo BT Mouse" "libinput Natural Scrolling Enabled" 1
+
+# Disable error bell in X11
+# The bell is triggered when for example renaming file in nautilus
+# and moving the cursor far to left, when used with headphones, the sound
+# is to high and cannot be lowered in pavucontrol
+exec --no-startup-id xset b off
