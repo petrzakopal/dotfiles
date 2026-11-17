@@ -252,3 +252,9 @@ hl.bind(mainMod .. " + SHIFT + LEFT",
 
 hl.bind(mainMod .. " + SHIFT + RIGHT",
     hl.dsp.workspace.move({ monitor = "r" }))
+
+hl.bind(mainMod .. " + SHIFT + UP",
+    hl.dsp.workspace.move({ monitor = "u" }))
+
+hl.bind(mainMod .. " + SHIFT + DOWN",
+    hl.dsp.workspace.move({ monitor = "d" }))
