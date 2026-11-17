@@ -245,3 +245,10 @@ hl.window_rule({
     float = true,
     monitor = "eDP-1",
 })
+
+-- Move the entire active workspace between monitors
+hl.bind(mainMod .. " + SHIFT + LEFT",
+    hl.dsp.workspace.move({ monitor = "l" }))
+
+hl.bind(mainMod .. " + SHIFT + RIGHT",
+    hl.dsp.workspace.move({ monitor = "r" }))
